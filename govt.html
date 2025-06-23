@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Government Schemes - EcoMitra</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-header">
+    <a href="index.html" class="back-home-btn" data-i18n="back_home">← Back to Home</a>
+    <div class="lang-select-container">
+      <label for="lang-select-govt" data-i18n="select_language_label">🔊 Select Language</label>
+      <select id="lang-select-govt">
+        <option value="en">English</option>
+        <option value="hi">हिन्दी</option>
+      </select>
+    </div>
+  </div>
+  <header>
+    <h1 data-i18n="govt_schemes">Government Schemes</h1>
+  </header>
+  <main>
+    <section>
+      <h2 data-i18n="waste_to_wealth">Waste-to-Wealth Schemes</h2>
+      <p data-i18n="govt_desc">This page will provide information on Swachh Bharat, SHG, and other government schemes for waste management.</p>
+      <!-- Detailed content will go here -->
+    </section>
+  </main>
+  <footer class="eco-footer" data-i18n="footer">Built for Bharat. Powered by EcoMitra. 🌏</footer>
+  <script>
+    const translations = {
+      hi: {
+        back_home: '← होम पेज पर वापस जाएं',
+        select_language_label: '🔊 भाषा चुनें',
+        govt_schemes: 'सरकारी योजनाएँ',
+        waste_to_wealth: 'कचरे से संपत्ति योजनाएँ',
+        govt_desc: 'यह पेज स्वच्छ भारत, SHG और अन्य सरकारी योजनाओं की जानकारी देगा।',
+        footer: 'भारत के लिए बनाया गया। EcoMitra द्वारा संचालित। 🌏',
+      },
+      en: {
+        back_home: '← Back to Home',
+        select_language_label: '🔊 Select Language',
+        govt_schemes: 'Government Schemes',
+        waste_to_wealth: 'Waste-to-Wealth Schemes',
+        govt_desc: 'This page will provide information on Swachh Bharat, SHG, and other government schemes for waste management.',
+        footer: 'Built for Bharat. Powered by EcoMitra. 🌏',
+      }
+    };
+    const langSelect = document.getElementById('lang-select-govt');
+    function setLang(lang) {
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        } else if (translations['en'][key]) {
+          el.textContent = translations['en'][key];
+        }
+      });
+    }
+    langSelect.addEventListener('change', e => {
+      const lang = e.target.value;
+      localStorage.setItem('ecomitra_lang', lang);
+      setLang(lang);
+    });
+    // On page load, set language from localStorage or default
+    const savedLang = localStorage.getItem('ecomitra_lang') || langSelect.value;
+    langSelect.value = savedLang;
+    setLang(savedLang);
+  </script>
+</body>
+</html> 

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Earn from Waste - EcoMitra</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-header">
+    <a href="index.html" class="back-home-btn" data-i18n="back_home">⬅ Back to Home</a>
+    <div class="lang-select-container">
+      <label for="lang-select-earn" data-i18n="select_language_label">🎧 Select Language</label>
+      <select id="lang-select-earn">
+        <option value="en">English</option>
+        <option value="hi">हिन्दी</option>
+        <option value="bn">বাংলা</option>
+        <option value="mr">मराठी</option>
+      </select>
+    </div>
+  </div>
+  <main>
+    <section class="section-content">
+      <h2 data-i18n="earn_from_waste">💰 Sustainable Business from Waste</h2>
+      <div class="earn-cards-detailed">
+        <div class="earn-card-detailed">
+          <span class="earn-icon">🌿</span>
+          <span class="earn-title" data-i18n="compost_title">Start Compost Business</span>
+          <p class="earn-desc" data-i18n="compost_desc">🌱 Make compost from kitchen waste in 15–20 days.<br>🌱 Sell it to farmers @ ₹5–₹15/kg.<br>🌱 1 household = 20kg/month = ₹300–₹500.</p>
+          <a href="compost.html" target="_blank" class="earn-btn" data-i18n="compost_btn">Learn Composting ↗ (View Guide)</a>
+        </div>
+        <div class="earn-card-detailed">
+          <span class="earn-icon">♻️</span>
+          <span class="earn-title" data-i18n="scrap_title">Scrap Collection & Sorting</span>
+          <p class="earn-desc" data-i18n="scrap_desc">♻️ Clean plastic & metal fetch 2x more rate.<br>♻️ Paper: ₹8/kg, Plastic: ₹12/kg, Metal: ₹20–₹30/kg.<br>♻️ Tie up with nearby kabadiwala from the app.</p>
+          <a href="dealers.html" class="earn-btn" target="_blank" data-i18n="scrap_btn">➤ Find Nearby Dealers ↗</a>
+        </div>
+        <div class="earn-card-detailed">
+          <span class="earn-icon">🧶</span>
+          <span class="earn-title" data-i18n="crafts_title">Make & Sell Upcycled Products</span>
+          <p class="earn-desc" data-i18n="crafts_desc">🧶 Use wrappers, bottles to make flower pots, bags, baskets.<br>🧶 Sell at haats, SHG stalls, or local fairs.<br>🧶 Profit ₹30–₹100 per item.</p>
+          <a href="crafts.html" target="_blank" class="earn-btn" data-i18n="crafts_btn">View Ideas ↗ (Craft Gallery)</a>
+        </div>
+        <div class="earn-card-detailed">
+          <span class="earn-icon">🧺</span>
+          <span class="earn-title" data-i18n="pickup_title">Launch Waste Pickup Service</span>
+          <p class="earn-desc" data-i18n="pickup_desc">🧺 Charge ₹10–₹20/month from 10+ homes.<br>🧺 Collect and sell sorted waste in bulk.<br>🧺 Potential ₹800–₹1200/month income.</p>
+          <a href="pickup.html" target="_blank" class="earn-btn" data-i18n="pickup_btn">How It Works ↗ (See Model)</a>
+        </div>
+        <div class="earn-card-detailed">
+          <span class="earn-icon">🎓</span>
+          <span class="earn-title" data-i18n="trainer_title">Eco Training & Rewards</span>
+          <p class="earn-desc" data-i18n="trainer_desc">🎓 Teach 10 people & become local Eco Trainer.<br>🎓 Submit ideas and earn gift cards or ₹500 reward.<br>🎓 Get featured on EcoMitra app as a Champion.</p>
+          <a href="rewards.html" target="_blank" class="earn-btn" data-i18n="trainer_btn">Become a Trainer ↗ (Start Earning)</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="eco-footer" data-i18n="footer">Built for Bharat. Powered by EcoMitra. 🌏</footer>
+  <script>
+    const translations = {
+      hi: {
+        back_home: '⬅ होम पेज पर वापस जाएं',
+        select_language_label: '🎧 भाषा चुनें',
+        earn_from_waste: '💰 कचरे से कमाई के व्यवसाय',
+        compost_title: 'कम्पोस्ट व्यवसाय शुरू करें',
+        compost_desc: '🌱 रसोई कचरे से 15–20 दिन में कम्पोस्ट बनाएं।<br>🌱 किसानों को ₹5–₹15/किग्रा पर बेचें।<br>🌱 1 घर = 20किग्रा/माह = ₹300–₹500।',
+        compost_btn: 'कम्पोस्टिंग सीखें ↗ (गाइड देखें)',
+        scrap_title: 'स्क्रैप संग्रहण और छंटाई',
+        scrap_desc: '♻️ साफ प्लास्टिक और धातु पर 2x अधिक रेट मिलता है।<br>♻️ कागज: ₹8/किग्रा, प्लास्टिक: ₹12/किग्रा, धातु: ₹20–₹30/किग्रा।<br>♻️ नजदीकी कबाड़ी से ऐप पर संपर्क करें।',
+        scrap_btn: '➤ नजदीकी डीलर खोजें ↗',
+        crafts_title: 'अपसाइकल उत्पाद बनाएं और बेचें',
+        crafts_desc: '🧶 रैपर, बोतल से फ्लावर पॉट, बैग, टोकरी बनाएं।<br>🧶 हाट, SHG स्टॉल या मेले में बेचें।<br>🧶 प्रति आइटम ₹30–₹100 लाभ।',
+        crafts_btn: 'आइडिया देखें ↗ (क्राफ्ट गैलरी)',
+        pickup_title: 'कचरा पिकअप सेवा शुरू करें',
+        pickup_desc: '🧺 10+ घरों से ₹10–₹20/माह शुल्क लें।<br>🧺 छंटा कचरा थोक में बेचें।<br>🧺 संभावित ₹800–₹1200/माह आय।',
+        pickup_btn: 'कैसे काम करता है ↗ (मॉडल देखें)',
+        trainer_title: 'इको ट्रेनिंग और रिवॉर्ड्स',
+        trainer_desc: '🎓 10 लोगों को सिखाएं और स्थानीय इको ट्रेनर बनें।<br>🎓 आइडिया भेजें और गिफ्ट कार्ड या ₹500 पाएं।<br>🎓 EcoMitra ऐप पर चैंपियन के रूप में दिखें।',
+        trainer_btn: 'ट्रेनर बनें ↗ (कमाई शुरू करें)',
+        footer: 'भारत के लिए बनाया गया। EcoMitra द्वारा संचालित। 🌏',
+      },
+      en: {
+        back_home: '⬅ Back to Home',
+        select_language_label: '🎧 Select Language',
+        earn_from_waste: '💰 Sustainable Business from Waste',
+        compost_title: 'Start Compost Business',
+        compost_desc: '🌱 Make compost from kitchen waste in 15–20 days.<br>🌱 Sell it to farmers @ ₹5–₹15/kg.<br>🌱 1 household = 20kg/month = ₹300–₹500.',
+        compost_btn: 'Learn Composting ↗ (View Guide)',
+        scrap_title: 'Scrap Collection & Sorting',
+        scrap_desc: '♻️ Clean plastic & metal fetch 2x more rate.<br>♻️ Paper: ₹8/kg, Plastic: ₹12/kg, Metal: ₹20–₹30/kg.<br>♻️ Tie up with nearby kabadiwala from the app.',
+        scrap_btn: '➤ Find Nearby Dealers ↗',
+        crafts_title: 'Make & Sell Upcycled Products',
+        crafts_desc: '🧶 Use wrappers, bottles to make flower pots, bags, baskets.<br>🧶 Sell at haats, SHG stalls, or local fairs.<br>🧶 Profit ₹30–₹100 per item.',
+        crafts_btn: 'View Ideas ↗ (Craft Gallery)',
+        pickup_title: 'Launch Waste Pickup Service',
+        pickup_desc: '🧺 Charge ₹10–₹20/month from 10+ homes.<br>🧺 Collect and sell sorted waste in bulk.<br>🧺 Potential ₹800–₹1200/month income.',
+        pickup_btn: 'How It Works ↗ (See Model)',
+        trainer_title: 'Eco Training & Rewards',
+        trainer_desc: '🎓 Teach 10 people & become local Eco Trainer.<br>🎓 Submit ideas and earn gift cards or ₹500 reward.<br>🎓 Get featured on EcoMitra app as a Champion.',
+        trainer_btn: 'Become a Trainer ↗ (Start Earning)',
+        footer: 'Built for Bharat. Powered by EcoMitra. 🌏',
+      }
+    };
+  </script>
+  <script src="lang.js"></script>
+  <script>initLanguage(translations, 'lang-select-earn');</script>
+  <script>
+    // --- Scrap Dealer Search Functionality ---
+    document.addEventListener('DOMContentLoaded', function() {
+      const scrapDealers = [
+        { name: 'Ramesh Scrap', location: 'Bihar', distance: '1.2 km', contact: '9876543210' },
+        { name: 'Green Kabadi', location: 'UP', distance: '2.5 km', contact: '9123456780' },
+        { name: 'Eco Recycle', location: 'Jharkhand', distance: '3.1 km', contact: '9988776655' },
+        { name: 'Sunita Scrap', location: 'Bihar', distance: '0.8 km', contact: '9876501234' },
+        { name: 'Village Kabadi', location: 'West Bengal', distance: '4.0 km', contact: '9001122334' },
+      ];
+      const scrapList = document.getElementById('scrap-dealer-list');
+      const scrapInput = document.getElementById('scrap-search-input');
+      function renderScrapDealers(filter = '') {
+        const f = filter.trim().toLowerCase();
+        scrapList.innerHTML = '';
+        scrapDealers.filter(d => d.name.toLowerCase().includes(f) || d.location.toLowerCase().includes(f)).forEach(d => {
+          const card = document.createElement('div');
+          card.className = 'scrap-dealer-card';
+          card.innerHTML = `<b>${d.name}</b><br><span>${d.location}</span><br><span>${d.distance}</span><br><a href="tel:${d.contact}">📞 ${d.contact}</a>`;
+          scrapList.appendChild(card);
+        });
+        if (scrapList.innerHTML === '') {
+          scrapList.innerHTML = '<div class="scrap-dealer-card">No dealers found.</div>';
+        }
+      }
+      if (scrapInput && scrapList) {
+        renderScrapDealers();
+        scrapInput.addEventListener('input', e => renderScrapDealers(e.target.value));
+      }
+      // Smooth scroll for the button
+      const findDealersBtn = document.getElementById('find-dealers-btn');
+      if (findDealersBtn) {
+        findDealersBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          const section = document.getElementById('scrap-dealers-section');
+          if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>

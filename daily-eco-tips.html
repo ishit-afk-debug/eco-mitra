@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Eco Tips - EcoMitra</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-header">
+    <a href="features.html" class="back-home-btn">⬅ Back to Features</a>
+  </div>
+  <main>
+    <section class="section-content">
+      <h2>🌞 Daily Eco Tips</h2>
+      <div class="eco-tip-box">
+        <p id="eco-tip">Tip will appear here.</p>
+        <button onclick="showRandomTip()" class="feature-btn">Show Another Tip</button>
+      </div>
+    </section>
+  </main>
+  <footer class="eco-footer">Built for Bharat. Powered by EcoMitra. 🌏</footer>
+  <script>
+    const tips = [
+      'Keep wet and dry waste separate for easy recycling.',
+      'Store hazardous waste safely away from children and animals.',
+      'Compost your kitchen waste to enrich your soil.',
+      'Use cloth bags instead of plastic bags.',
+      'Rinse recyclables before putting them in the bin.',
+      'Do not burn plastic or chemical waste.',
+      'Share unused items with neighbors instead of throwing them away.',
+      'Keep your waste storage area clean and covered.'
+    ];
+    function showRandomTip() {
+      const tip = tips[Math.floor(Math.random() * tips.length)];
+      document.getElementById('eco-tip').textContent = tip;
+    }
+    showRandomTip();
+  </script>
+</body>
+</html> 

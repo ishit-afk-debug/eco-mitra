@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📍 Nearby Scrap Dealers - EcoMitra</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .dealers-header {
+      background: #e3f2fd;
+      border-radius: 1.2em;
+      margin: 1.5em auto 1em auto;
+      padding: 1.2em 1em 0.5em 1em;
+      max-width: 600px;
+      box-shadow: 0 2px 8px rgba(60,120,180,0.07);
+      text-align: center;
+    }
+    .dealers-section {
+      background: #fff;
+      border-radius: 1.1em;
+      box-shadow: 0 2px 10px rgba(60,120,180,0.08);
+      padding: 1.2em 1.2em 1.2em 1.2em;
+      margin: 1.2em auto;
+      max-width: 600px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7em;
+    }
+    .dealer-search-bar {
+      display: flex;
+      gap: 0.7em;
+      margin: 1em 0 1.2em 0;
+      justify-content: center;
+    }
+    .dealer-search-bar input {
+      padding: 0.7em 1em;
+      border-radius: 1em;
+      border: 1.5px solid #90caf9;
+      font-size: 1.05em;
+      width: 70%;
+      max-width: 320px;
+    }
+    .dealer-filters {
+      display: flex;
+      gap: 0.7em;
+      margin-bottom: 1em;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .dealer-filter {
+      background: #e3f2fd;
+      color: #1565c0;
+      border: none;
+      border-radius: 1em;
+      padding: 0.4em 1.1em;
+      font-size: 1em;
+      cursor: pointer;
+      font-weight: 500;
+      transition: background 0.15s, color 0.15s;
+    }
+    .dealer-filter.active, .dealer-filter:hover {
+      background: #90caf9;
+      color: #0d47a1;
+    }
+    .dealer-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2em;
+    }
+    .dealer-card {
+      background: #f1f8e9;
+      border-radius: 1em;
+      box-shadow: 0 2px 8px #0001;
+      padding: 1em 1.2em;
+      display: flex;
+      flex-direction: column;
+      gap: 0.3em;
+      align-items: flex-start;
+    }
+    .dealer-title {
+      font-size: 1.13em;
+      font-weight: 700;
+      color: #256029;
+    }
+    .dealer-location {
+      font-size: 1em;
+      color: #607d8b;
+    }
+    .dealer-distance {
+      font-size: 0.98em;
+      color: #388e3c;
+    }
+    .dealer-tags {
+      display: flex;
+      gap: 0.5em;
+      margin: 0.2em 0 0.2em 0;
+    }
+    .dealer-tag {
+      background: #c8e6c9;
+      color: #256029;
+      border-radius: 0.7em;
+      padding: 0.2em 0.8em;
+      font-size: 0.95em;
+      font-weight: 500;
+    }
+    .dealer-call-btn {
+      background: #388e3c;
+      color: #fff;
+      border: none;
+      border-radius: 1.2em;
+      padding: 0.6em 1.5em;
+      font-size: 1.05em;
+      font-weight: 600;
+      margin-top: 0.5em;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .dealer-call-btn:hover, .dealer-call-btn:focus {
+      background: #81c784;
+      color: #256029;
+    }
+    .dealers-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2em;
+      align-items: center;
+      margin: 2em auto 1.5em auto;
+      max-width: 600px;
+    }
+    .dealers-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.7em;
+      background: linear-gradient(90deg, #A5D6A7 60%, #81c784 100%);
+      color: #1B5E20;
+      font-weight: 700;
+      font-size: 1.18em;
+      border: none;
+      border-radius: 2em;
+      padding: 1em 2.5em;
+      text-align: center;
+      text-decoration: none;
+      box-shadow: 0 2px 8px #0001;
+      transition: background 0.18s, color 0.18s, box-shadow 0.18s, transform 0.13s;
+      cursor: pointer;
+      min-width: 240px;
+    }
+    .dealers-btn:hover, .dealers-btn:focus {
+      background: linear-gradient(90deg, #81c784 60%, #A5D6A7 100%);
+      color: #145a1a;
+      box-shadow: 0 4px 16px #0002;
+      outline: none;
+      transform: scale(1.04);
+    }
+    @media (max-width: 700px) {
+      .dealers-header, .dealers-section, .dealers-actions { max-width: 98vw; }
+      .dealers-btn { width: 98vw; min-width: unset; font-size: 1.05em; }
+    }
+  </style>
+</head>
+<body>
+  <header class="page-header">
+    <a href="earn.html" class="back-home-btn" data-i18n="back_to_earn">⬅ Back to Earn Page</a>
+  </header>
+  <div class="dealers-header">
+    <h1 data-i18n="dealers_title">📍 Nearby Scrap Dealers</h1>
+    <p data-i18n="dealers_subtitle">Browse and contact local buyers for your sorted waste. Get the best rates!</p>
+  </div>
+  <main>
+    <div class="dealers-section">
+      <div class="dealer-search-bar">
+        <input type="text" id="dealer-search-input" data-i18n-placeholder="dealer_search_placeholder" placeholder="Search by name, location, or material...">
+      </div>
+      <div class="dealer-filters">
+        <button class="dealer-filter active" data-filter="all" data-i18n="filter_all">All</button>
+        <button class="dealer-filter" data-filter="plastic" data-i18n="filter_plastic">Plastic</button>
+        <button class="dealer-filter" data-filter="metal" data-i18n="filter_metal">Metal</button>
+        <button class="dealer-filter" data-filter="paper" data-i18n="filter_paper">Paper</button>
+      </div>
+      <div class="dealer-list" id="dealer-list">
+        <!-- Example dealer cards -->
+        <div class="dealer-card" data-material="plastic metal">
+          <div class="dealer-title">Green Kabadi</div>
+          <div class="dealer-location">UP</div>
+          <div class="dealer-distance" data-i18n="distance_away" data-distance="1.5">1.5 km away</div>
+          <div class="dealer-tags">
+            <span class="dealer-tag" data-i18n="tag_plastic">Plastic</span>
+            <span class="dealer-tag" data-i18n="tag_metal">Metal</span>
+          </div>
+          <a href="tel:9123456780" class="dealer-call-btn" data-i18n="call_now">📞 Call Now</a>
+        </div>
+        <div class="dealer-card" data-material="paper plastic">
+          <div class="dealer-title">Ramesh Scrap</div>
+          <div class="dealer-location">Bihar</div>
+          <div class="dealer-distance" data-i18n="distance_away" data-distance="1.2">1.2 km away</div>
+          <div class="dealer-tags">
+            <span class="dealer-tag" data-i18n="tag_paper">Paper</span>
+            <span class="dealer-tag" data-i18n="tag_plastic">Plastic</span>
+          </div>
+          <a href="tel:9876543210" class="dealer-call-btn" data-i18n="call_now">📞 Call Now</a>
+        </div>
+        <div class="dealer-card" data-material="metal">
+          <div class="dealer-title">Eco Recycle</div>
+          <div class="dealer-location">Jharkhand</div>
+          <div class="dealer-distance" data-i18n="distance_away" data-distance="3.1">3.1 km away</div>
+          <div class="dealer-tags">
+            <span class="dealer-tag" data-i18n="tag_metal">Metal</span>
+          </div>
+          <a href="tel:9988776655" class="dealer-call-btn" data-i18n="call_now">📞 Call Now</a>
+        </div>
+        <div class="dealer-card" data-material="paper">
+          <div class="dealer-title">Sunita Scrap</div>
+          <div class="dealer-location">Bihar</div>
+          <div class="dealer-distance" data-i18n="distance_away" data-distance="0.8">0.8 km away</div>
+          <div class="dealer-tags">
+            <span class="dealer-tag" data-i18n="tag_paper">Paper</span>
+          </div>
+          <a href="tel:9876501234" class="dealer-call-btn" data-i18n="call_now">📞 Call Now</a>
+        </div>
+        <div class="dealer-card" data-material="plastic">
+          <div class="dealer-title">Village Kabadi</div>
+          <div class="dealer-location">West Bengal</div>
+          <div class="dealer-distance" data-i18n="distance_away" data-distance="4.0">4.0 km away</div>
+          <div class="dealer-tags">
+            <span class="dealer-tag" data-i18n="tag_plastic">Plastic</span>
+          </div>
+          <a href="tel:9001122334" class="dealer-call-btn" data-i18n="call_now">📞 Call Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="dealers-actions">
+      <a href="sell.html" class="dealers-btn" data-i18n="sell_my_waste"><span>📦</span> Sell My Waste</a>
+      <a href="#" class="dealers-btn" data-i18n="add_my_dealer"><span>🗺️</span> Add My Dealer</a>
+    </div>
+  </main>
+  <footer class="eco-footer" data-i18n="footer">Built for Bharat. Powered by EcoMitra. 🌏</footer>
+  <script>
+    const translations = {
+      hi: {
+        back_to_earn: '⬅ कमाई पेज पर वापस जाएं',
+        dealers_title: '📍 नजदीकी कबाड़ी',
+        dealers_subtitle: 'अपने छंटे हुए कचरे के लिए स्थानीय खरीदारों से संपर्क करें। सबसे अच्छे रेट पाएं!',
+        dealer_search_placeholder: 'नाम, स्थान या सामग्री से खोजें...',
+        filter_all: 'सभी',
+        filter_plastic: 'प्लास्टिक',
+        filter_metal: 'धातु',
+        filter_paper: 'कागज',
+        tag_plastic: 'प्लास्टिक',
+        tag_metal: 'धातु',
+        tag_paper: 'कागज',
+        call_now: '📞 अभी कॉल करें',
+        sell_my_waste: '📦 मेरा कचरा बेचें',
+        add_my_dealer: '🗺️ मेरा डीलर जोड़ें',
+        distance_away: '{distance} किमी दूर',
+        footer: 'भारत के लिए बनाया गया। EcoMitra द्वारा संचालित। 🌏',
+      },
+      en: {
+        back_to_earn: '⬅ Back to Earn Page',
+        dealers_title: '📍 Nearby Scrap Dealers',
+        dealers_subtitle: 'Browse and contact local buyers for your sorted waste. Get the best rates!',
+        dealer_search_placeholder: 'Search by name, location, or material...',
+        filter_all: 'All',
+        filter_plastic: 'Plastic',
+        filter_metal: 'Metal',
+        filter_paper: 'Paper',
+        tag_plastic: 'Plastic',
+        tag_metal: 'Metal',
+        tag_paper: 'Paper',
+        call_now: '📞 Call Now',
+        sell_my_waste: '📦 Sell My Waste',
+        add_my_dealer: '🗺️ Add My Dealer',
+        distance_away: '{distance} km away',
+        footer: 'Built for Bharat. Powered by EcoMitra. 🌏',
+      }
+    };
+    // Add logic to replace {distance} in distance_away
+    document.addEventListener('DOMContentLoaded', function() {
+      function setLang(lang) {
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+          const key = el.getAttribute('data-i18n');
+          let value = translations[lang] && translations[lang][key] ? translations[lang][key] : translations['en'][key];
+          if (key === 'distance_away' && el.dataset.distance) {
+            value = value.replace('{distance}', el.dataset.distance);
+          }
+          el.textContent = value;
+        });
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+          const key = el.getAttribute('data-i18n-placeholder');
+          let value = translations[lang] && translations[lang][key] ? translations[lang][key] : translations['en'][key];
+          el.setAttribute('placeholder', value);
+        });
+      }
+      const savedLang = localStorage.getItem('ecomitra_lang') || 'en';
+      setLang(savedLang);
+      // Optionally, add a language selector if needed
+    });
+  </script>
+  <script>
+    // Simple filter and search logic for demo
+    const filterBtns = document.querySelectorAll('.dealer-filter');
+    const dealerCards = document.querySelectorAll('.dealer-card');
+    const searchInput = document.getElementById('dealer-search-input');
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.getAttribute('data-filter');
+        dealerCards.forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-material').includes(filter)) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+    searchInput.addEventListener('input', e => {
+      const val = e.target.value.toLowerCase();
+      dealerCards.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        if (text.includes(val)) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  </script>
+</body>
+</html> 

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🌿 Start Your Own Compost Business - EcoMitra</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .compost-business-header {
+      background: #e8f5e9;
+      border-radius: 1.2em;
+      margin: 1.5em auto 1em auto;
+      padding: 1.2em 1em 0.5em 1em;
+      max-width: 600px;
+      box-shadow: 0 2px 8px rgba(60,120,60,0.07);
+      text-align: center;
+    }
+    .compost-section {
+      background: #fff;
+      border-radius: 1.1em;
+      box-shadow: 0 2px 10px rgba(60,120,60,0.08);
+      padding: 1.2em 1.2em 1.2em 1.2em;
+      margin: 1.2em auto;
+      max-width: 600px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7em;
+    }
+    .compost-section h2 {
+      font-size: 1.25em;
+      color: #256029;
+      margin-bottom: 0.3em;
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+    }
+    .compost-section ul, .compost-section ol {
+      margin: 0.5em 0 0 0;
+      padding-left: 1.2em;
+    }
+    .compost-section li {
+      font-size: 1.05em;
+      margin-bottom: 0.4em;
+      color: #444;
+      line-height: 1.6;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5em;
+    }
+    .compost-section .icon {
+      font-size: 1.3em;
+      margin-right: 0.3em;
+      flex-shrink: 0;
+    }
+    .compost-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2em;
+      align-items: center;
+      margin: 2em auto 1.5em auto;
+      max-width: 600px;
+    }
+    .compost-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.7em;
+      background: linear-gradient(90deg, #A5D6A7 60%, #81c784 100%);
+      color: #1B5E20;
+      font-weight: 700;
+      font-size: 1.18em;
+      border: none;
+      border-radius: 2em;
+      padding: 1em 2.5em;
+      text-align: center;
+      text-decoration: none;
+      box-shadow: 0 2px 8px #0001;
+      transition: background 0.18s, color 0.18s, box-shadow 0.18s, transform 0.13s;
+      cursor: pointer;
+      min-width: 240px;
+    }
+    .compost-btn:hover, .compost-btn:focus {
+      background: linear-gradient(90deg, #81c784 60%, #A5D6A7 100%);
+      color: #145a1a;
+      box-shadow: 0 4px 16px #0002;
+      outline: none;
+      transform: scale(1.04);
+    }
+    @media (max-width: 700px) {
+      .compost-business-header, .compost-section, .compost-actions { max-width: 98vw; }
+      .compost-btn { width: 98vw; min-width: unset; font-size: 1.05em; }
+    }
+  </style>
+</head>
+<body>
+  <header class="page-header">
+    <a href="earn.html" class="back-home-btn" data-i18n="back_to_earn">⬅ Back to Earn Page</a>
+  </header>
+  <div class="compost-business-header">
+    <h1 data-i18n="compost_main_title">🌿 Start Your Own Compost Business</h1>
+    <p data-i18n="compost_main_subtitle">Turn kitchen waste into monthly income. Become a green entrepreneur in your village!</p>
+  </div>
+  <main>
+    <div class="compost-section">
+      <h2><span class="icon">❓</span> <span data-i18n="why_composting">Why Composting?</span></h2>
+      <ul>
+        <li data-i18n="compost_point1"><span class="icon">🍃</span> 60% of household waste is organic—composting reduces pollution and landfill waste.</li>
+        <li data-i18n="compost_point2"><span class="icon">💰</span> Compost sells for ₹5–₹15/kg to local buyers.</li>
+        <li data-i18n="compost_point3"><span class="icon">🌱</span> Earn money while helping the environment.</li>
+      </ul>
+    </div>
+    <div class="compost-section">
+      <h2><span class="icon">🛠️</span> <span data-i18n="how_to_start">How to Start</span></h2>
+      <ol>
+        <li data-i18n="how_point1"><span class="icon">🗑️</span> Collect kitchen waste daily (vegetable peels, leftovers, etc.)</li>
+        <li data-i18n="how_point2"><span class="icon">🍂</span> Layer green (wet) and brown (dry) waste</li>
+        <li data-i18n="how_point3"><span class="icon">🔄</span> Mix every 2 days for aeration</li>
+        <li data-i18n="how_point4"><span class="icon">⏳</span> Compost is ready in 15–20 days</li>
+        <li data-i18n="how_point5"><span class="icon">🪴</span> Pack and sell your compost locally</li>
+      </ol>
+    </div>
+    <div class="compost-section">
+      <h2><span class="icon">💸</span> <span data-i18n="earnings_potential">Earnings Potential</span></h2>
+      <ul>
+        <li data-i18n="earnings_point1"><span class="icon">🏠</span> 1 household = 20kg/month = <b>₹300–₹500/month</b></li>
+        <li data-i18n="earnings_point2"><span class="icon">👥</span> Group composting (10 homes) = <b>₹2000+/month</b></li>
+      </ul>
+    </div>
+    <div class="compost-section">
+      <h2><span class="icon">🛒</span> <span data-i18n="sell_compost">Sell Your Compost</span></h2>
+      <ul>
+        <li data-i18n="sell_point1"><span class="icon">👨‍🌾</span> Local farmers</li>
+        <li data-i18n="sell_point2"><span class="icon">🏡</span> Plant nurseries</li>
+        <li data-i18n="sell_point3"><span class="icon">🥬</span> Kitchen gardeners</li>
+      </ul>
+      <div style="text-align:center;margin-top:1em;">
+        <a href="dealers.html" class="compost-btn" data-i18n="find_buyers_btn"><span>📞</span> Find Buyers Nearby</a>
+      </div>
+    </div>
+    <div class="compost-actions">
+      <a href="compost-guide.html" class="compost-btn" data-i18n="download_guide_btn"><span>📘</span> Download Compost Guide</a>
+      <a href="dealers.html" class="compost-btn" data-i18n="find_compost_buyers_btn"><span>📞</span> Find Compost Buyers</a>
+    </div>
+  </main>
+  <footer class="eco-footer" data-i18n="footer">Built for Bharat. Powered by EcoMitra. 🌏</footer>
+  <script>
+    const translations = {
+      hi: {
+        back_to_earn: '⬅ कमाई पेज पर वापस जाएं',
+        compost_main_title: '🌿 अपना कम्पोस्ट व्यवसाय शुरू करें',
+        compost_main_subtitle: 'रसोई कचरे से मासिक आय बनाएं। अपने गाँव में ग्रीन उद्यमी बनें!',
+        why_composting: 'कम्पोस्टिंग क्यों?',
+        compost_point1: '🍃 60% घरेलू कचरा जैविक है—कम्पोस्टिंग से प्रदूषण और लैंडफिल कम होते हैं।',
+        compost_point2: '💰 कम्पोस्ट ₹5–₹15/किग्रा में बिकता है।',
+        compost_point3: '🌱 पर्यावरण की मदद करते हुए कमाई करें।',
+        how_to_start: 'शुरू कैसे करें',
+        how_point1: '🗑️ रोज़ रसोई कचरा इकट्ठा करें (सब्जी के छिलके, बचा खाना आदि)',
+        how_point2: '🍂 हरा (गीला) और भूरा (सूखा) कचरा परतों में लगाएं',
+        how_point3: '🔄 हर 2 दिन में मिलाएं ताकि हवा लगे',
+        how_point4: '⏳ 15–20 दिन में कम्पोस्ट तैयार',
+        how_point5: '🪴 पैक करें और स्थानीय रूप से बेचें',
+        earnings_potential: 'कमाई की संभावना',
+        earnings_point1: '🏠 1 घर = 20किग्रा/माह = <b>₹300–₹500/माह</b>',
+        earnings_point2: '👥 समूह कम्पोस्टिंग (10 घर) = <b>₹2000+/माह</b>',
+        sell_compost: 'अपना कम्पोस्ट बेचें',
+        sell_point1: '👨‍🌾 स्थानीय किसान',
+        sell_point2: '🏡 पौधशाला',
+        sell_point3: '🥬 किचन गार्डनर',
+        find_buyers_btn: '📞 नजदीकी खरीदार खोजें',
+        download_guide_btn: '📘 कम्पोस्ट गाइड डाउनलोड करें',
+        find_compost_buyers_btn: '📞 कम्पोस्ट खरीदार खोजें',
+        footer: 'भारत के लिए बनाया गया। EcoMitra द्वारा संचालित। 🌏',
+      },
+      en: {
+        back_to_earn: '⬅ Back to Earn Page',
+        compost_main_title: '🌿 Start Your Own Compost Business',
+        compost_main_subtitle: 'Turn kitchen waste into monthly income. Become a green entrepreneur in your village!',
+        why_composting: 'Why Composting?',
+        compost_point1: '🍃 60% of household waste is organic—composting reduces pollution and landfill waste.',
+        compost_point2: '💰 Compost sells for ₹5–₹15/kg to local buyers.',
+        compost_point3: '🌱 Earn money while helping the environment.',
+        how_to_start: 'How to Start',
+        how_point1: '🗑️ Collect kitchen waste daily (vegetable peels, leftovers, etc.)',
+        how_point2: '🍂 Layer green (wet) and brown (dry) waste',
+        how_point3: '🔄 Mix every 2 days for aeration',
+        how_point4: '⏳ Compost is ready in 15–20 days',
+        how_point5: '🪴 Pack and sell your compost locally',
+        earnings_potential: 'Earnings Potential',
+        earnings_point1: '🏠 1 household = 20kg/month = <b>₹300–₹500/month</b>',
+        earnings_point2: '👥 Group composting (10 homes) = <b>₹2000+/month</b>',
+        sell_compost: 'Sell Your Compost',
+        sell_point1: '👨‍🌾 Local farmers',
+        sell_point2: '🏡 Plant nurseries',
+        sell_point3: '🥬 Kitchen gardeners',
+        find_buyers_btn: '📞 Find Buyers Nearby',
+        download_guide_btn: '📘 Download Compost Guide',
+        find_compost_buyers_btn: '📞 Find Compost Buyers',
+        footer: 'Built for Bharat. Powered by EcoMitra. 🌏',
+      }
+    };
+    // Add language switching logic if needed
+    document.addEventListener('DOMContentLoaded', function() {
+      function setLang(lang) {
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+          const key = el.getAttribute('data-i18n');
+          let value = translations[lang] && translations[lang][key] ? translations[lang][key] : translations['en'][key];
+          el.innerHTML = value;
+        });
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+          const key = el.getAttribute('data-i18n-placeholder');
+          let value = translations[lang] && translations[lang][key] ? translations[lang][key] : translations['en'][key];
+          el.setAttribute('placeholder', value);
+        });
+      }
+      const savedLang = localStorage.getItem('ecomitra_lang') || 'en';
+      setLang(savedLang);
+      // Optionally, add a language selector if needed
+    });
+  </script>
+</body>
+</html>

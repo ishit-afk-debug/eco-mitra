@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why EcoMitra? – EcoMitra</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-header">
+    <a href="index.html" class="back-home-btn" data-i18n="back_home">← Back to Home</a>
+    <div class="lang-select-container">
+      <label for="lang-select-about" data-i18n="select_language_label">🔊 Select Language</label>
+      <select id="lang-select-about">
+        <option value="en">English</option>
+        <option value="hi">हिन्दी</option>
+      </select>
+    </div>
+  </div>
+  <header>
+    <h1 data-i18n="why_ecomitra">Why EcoMitra?</h1>
+    <nav>
+      <a href="index.html" data-i18n="nav_home">Home</a>
+      <a href="compost.html" data-i18n="nav_compost">Compost & Recycling Guide</a>
+      <a href="income.html" data-i18n="nav_income">Livelihood Opportunities</a>
+      <a href="about.html" data-i18n="nav_about">Why EcoMitra?</a>
+    </nav>
+  </header>
+  <main>
+    <section class="challenges">
+      <h2 data-i18n="rural_challenges">Rural Challenges</h2>
+      <ul>
+        <li data-i18n="challenge_awareness">🚫 Lack of awareness, no segregation</li>
+        <li data-i18n="challenge_burning">🔥 Burning plastic and pollution</li>
+        <li data-i18n="challenge_access">🚚 No access to recycling</li>
+        <li data-i18n="challenge_income">💸 No income from waste</li>
+      </ul>
+    </section>
+    <section class="mission">
+      <h2 data-i18n="our_mission">Our Mission</h2>
+      <ul>
+        <li data-i18n="mission_educate">📚 Educate, Empower, Enable income</li>
+        <li data-i18n="mission_offline">📞 Offline support</li>
+        <li data-i18n="mission_voice">🗣️ Local language voice commands</li>
+        <li data-i18n="mission_simple">🔤 Simple, icon-based interface (Works Offline)</li>
+      </ul>
+    </section>
+  </main>
+  <footer class="eco-footer" data-i18n="footer">© 2024 EcoMitra. For Rural India.</footer>
+  <script>
+    const translations = {
+      hi: {
+        back_home: '← होम पेज पर वापस जाएं',
+        select_language_label: '🔊 भाषा चुनें',
+        why_ecomitra: 'क्यों EcoMitra?',
+        nav_home: 'होम',
+        nav_compost: 'कम्पोस्ट और रीसाइक्लिंग गाइड',
+        nav_income: 'आजीविका के अवसर',
+        nav_about: 'क्यों EcoMitra?',
+        rural_challenges: 'ग्रामीण चुनौतियाँ',
+        challenge_awareness: '🚫 जागरूकता की कमी, कोई छंटाई नहीं',
+        challenge_burning: '🔥 प्लास्टिक जलाना और प्रदूषण',
+        challenge_access: '🚚 रीसाइक्लिंग की सुविधा नहीं',
+        challenge_income: '💸 कचरे से कोई आय नहीं',
+        our_mission: 'हमारा मिशन',
+        mission_educate: '📚 शिक्षा, सशक्तिकरण, आय सक्षम बनाना',
+        mission_offline: '📞 ऑफलाइन सपोर्ट',
+        mission_voice: '🗣️ स्थानीय भाषा वॉयस कमांड',
+        mission_simple: '🔤 सरल, आइकन-आधारित इंटरफेस (ऑफलाइन काम करता है)',
+        footer: '© 2024 EcoMitra. ग्रामीण भारत के लिए।',
+      },
+      en: {
+        back_home: '← Back to Home',
+        select_language_label: '🔊 Select Language',
+        why_ecomitra: 'Why EcoMitra?',
+        nav_home: 'Home',
+        nav_compost: 'Compost & Recycling Guide',
+        nav_income: 'Livelihood Opportunities',
+        nav_about: 'Why EcoMitra?',
+        rural_challenges: 'Rural Challenges',
+        challenge_awareness: '🚫 Lack of awareness, no segregation',
+        challenge_burning: '🔥 Burning plastic and pollution',
+        challenge_access: '🚚 No access to recycling',
+        challenge_income: '💸 No income from waste',
+        our_mission: 'Our Mission',
+        mission_educate: '📚 Educate, Empower, Enable income',
+        mission_offline: '📞 Offline support',
+        mission_voice: '🗣️ Local language voice commands',
+        mission_simple: '🔤 Simple, icon-based interface (Works Offline)',
+        footer: '© 2024 EcoMitra. For Rural India.',
+      }
+    };
+    const langSelect = document.getElementById('lang-select-about');
+    function setLang(lang) {
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        } else if (translations['en'][key]) {
+          el.textContent = translations['en'][key];
+        }
+      });
+    }
+    langSelect.addEventListener('change', e => setLang(e.target.value));
+    setLang(langSelect.value);
+  </script>
+</body>
+</html> 

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Livelihood Opportunities – EcoMitra</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-header">
+    <a href="index.html" class="back-home-btn" data-i18n="back_home">← Back to Home</a>
+    <div class="lang-select-container">
+      <label for="lang-select-income" data-i18n="select_language_label">🔊 Select Language</label>
+      <select id="lang-select-income">
+        <option value="en">English</option>
+        <option value="hi">हिन्दी</option>
+      </select>
+    </div>
+  </div>
+  <header>
+    <h1 data-i18n="livelihood_opportunities">Livelihood Opportunities</h1>
+    <nav>
+      <a href="index.html" data-i18n="nav_home">Home</a>
+      <a href="compost.html" data-i18n="nav_compost">Compost & Recycling Guide</a>
+      <a href="income.html" data-i18n="nav_income">Livelihood Opportunities</a>
+      <a href="about.html" data-i18n="nav_about">Why EcoMitra?</a>
+    </nav>
+  </header>
+  <main>
+    <section class="income-options" id="sell">
+      <h2 data-i18n="how_to_earn">How to Earn from Waste</h2>
+      <ul>
+        <li data-i18n="earn_sell">💰 <strong>Sell sorted waste</strong> to scrap dealers for cash.</li>
+        <li data-i18n="earn_compost">🌿 <strong>Make and sell compost</strong> to farmers and gardeners.</li>
+        <li data-i18n="earn_crafts">🧶 <strong>Create upcycled crafts</strong> and sell at local markets.</li>
+        <li data-i18n="earn_rewards">🎖️ <strong>Win innovation rewards</strong> for creative reuse ideas.</li>
+        <li data-i18n="earn_govt">🤝 <strong>Benefit from government schemes</strong> like Swachh Bharat.</li>
+      </ul>
+    </section>
+    <section class="income-crafts" id="crafts">
+      <h2 data-i18n="make_handicrafts">Make Handicrafts</h2>
+      <ul>
+        <li data-i18n="crafts_cloth">🧶 <strong>Upcycle old cloth</strong> into bags, mats, or cleaning rags.</li>
+        <li data-i18n="crafts_bottle">🪴 <strong>Bottle Pots</strong> from plastic bottles.</li>
+        <li data-i18n="crafts_decor">🎨 <strong>DIY Decor</strong> from tin cans, jars, and fabric scraps.</li>
+      </ul>
+    </section>
+    <section class="motivation">
+      <h2 data-i18n="motivational_quotes">Motivational Quotes</h2>
+      <blockquote data-i18n="quote1">"Waste isn't waste until we waste it."</blockquote>
+      <blockquote data-i18n="quote2">"Small steps, big impact. Start today!"</blockquote>
+      <img src="images/income-quote.png" alt="Motivational Image" class="motivation-img">
+    </section>
+  </main>
+  <footer class="eco-footer" data-i18n="footer">© 2024 EcoMitra. For Rural India.</footer>
+  <script>
+    const translations = {
+      hi: {
+        back_home: '← होम पेज पर वापस जाएं',
+        select_language_label: '🔊 भाषा चुनें',
+        livelihood_opportunities: 'आजीविका के अवसर',
+        nav_home: 'होम',
+        nav_compost: 'कम्पोस्ट और रीसाइक्लिंग गाइड',
+        nav_income: 'आजीविका के अवसर',
+        nav_about: 'क्यों EcoMitra?',
+        how_to_earn: 'कचरे से कमाई कैसे करें',
+        earn_sell: '💰 <strong>छंटे हुए कचरे को</strong> कबाड़ी को बेचें और पैसे पाएं।',
+        earn_compost: '🌿 <strong>कम्पोस्ट बनाएं और बेचें</strong> किसानों और माली को।',
+        earn_crafts: '🧶 <strong>अपसाइक्लिंग क्राफ्ट्स बनाएं</strong> और बाजार में बेचें।',
+        earn_rewards: '🎖️ <strong>रचनात्मक विचारों के लिए पुरस्कार जीतें</strong>।',
+        earn_govt: '🤝 <strong>सरकारी योजनाओं का लाभ लें</strong> जैसे स्वच्छ भारत।',
+        make_handicrafts: 'हस्तशिल्प बनाएं',
+        crafts_cloth: '🧶 <strong>पुराने कपड़ों का पुनः उपयोग करें</strong> बैग, मैट या सफाई के कपड़े बनाने में।',
+        crafts_bottle: '🪴 <strong>बॉटल पॉट्स</strong> प्लास्टिक बोतलों से।',
+        crafts_decor: '🎨 <strong>DIY डेकोर</strong> टिन के डिब्बे, जार और कपड़े के टुकड़ों से।',
+        motivational_quotes: 'प्रेरणादायक उद्धरण',
+        quote1: '"कचरा तब तक कचरा नहीं है जब तक हम उसे बर्बाद न करें।"',
+        quote2: '"छोटे कदम, बड़ा असर। आज ही शुरू करें!"',
+        footer: '© 2024 EcoMitra. ग्रामीण भारत के लिए।',
+      },
+      en: {
+        back_home: '← Back to Home',
+        select_language_label: '🔊 Select Language',
+        livelihood_opportunities: 'Livelihood Opportunities',
+        nav_home: 'Home',
+        nav_compost: 'Compost & Recycling Guide',
+        nav_income: 'Livelihood Opportunities',
+        nav_about: 'Why EcoMitra?',
+        how_to_earn: 'How to Earn from Waste',
+        earn_sell: '💰 <strong>Sell sorted waste</strong> to scrap dealers for cash.',
+        earn_compost: '🌿 <strong>Make and sell compost</strong> to farmers and gardeners.',
+        earn_crafts: '🧶 <strong>Create upcycled crafts</strong> and sell at local markets.',
+        earn_rewards: '🎖️ <strong>Win innovation rewards</strong> for creative reuse ideas.',
+        earn_govt: '🤝 <strong>Benefit from government schemes</strong> like Swachh Bharat.',
+        make_handicrafts: 'Make Handicrafts',
+        crafts_cloth: '🧶 <strong>Upcycle old cloth</strong> into bags, mats, or cleaning rags.',
+        crafts_bottle: '🪴 <strong>Bottle Pots</strong> from plastic bottles.',
+        crafts_decor: '🎨 <strong>DIY Decor</strong> from tin cans, jars, and fabric scraps.',
+        motivational_quotes: 'Motivational Quotes',
+        quote1: '"Waste isn\'t waste until we waste it."',
+        quote2: '"Small steps, big impact. Start today!"',
+        footer: '© 2024 EcoMitra. For Rural India.',
+      }
+    };
+    const langSelect = document.getElementById('lang-select-income');
+    function setLang(lang) {
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+          el.innerHTML = translations[lang][key];
+        } else if (translations['en'][key]) {
+          el.innerHTML = translations['en'][key];
+        }
+      });
+    }
+    langSelect.addEventListener('change', e => {
+      const lang = e.target.value;
+      localStorage.setItem('ecomitra_lang', lang);
+      setLang(lang);
+    });
+    // On page load, set language from localStorage or default
+    const savedLang = localStorage.getItem('ecomitra_lang') || langSelect.value;
+    langSelect.value = savedLang;
+    setLang(savedLang);
+  </script>
+</body>
+</html> 

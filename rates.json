@@ -1,0 +1,8 @@
+{
+  "rates": [
+    { "type": "Plastic", "price": 12 },
+    { "type": "Paper", "price": 8 },
+    { "type": "Metal", "price": 25 },
+    { "type": "Glass", "price": 5 }
+  ]
+} 

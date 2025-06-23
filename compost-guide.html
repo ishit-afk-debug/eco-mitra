@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compost Guide - EcoMitra</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      background: #f5fbe6;
+      padding: 0;
+      margin: 0;
+    }
+    .compost-guide-container {
+      max-width: 700px;
+      margin: 2.5rem auto 2rem auto;
+      padding: 1.2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .compost-card {
+      background: #fff;
+      border: 1.5px solid #A5D6A7;
+      border-radius: 18px;
+      box-shadow: 0 2px 12px #0001;
+      padding: 1.3rem 1.2rem 1.1rem 1.2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+    .compost-card h3 {
+      font-size: 1.22rem;
+      font-weight: 700;
+      margin: 0 0 0.5rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+      color: #2E7D32;
+    }
+    .compost-card ul, .compost-card ol {
+      margin: 0 0 0 1.1em;
+      padding: 0 0 0 0.2em;
+      font-size: 1.07rem;
+      color: #333;
+    }
+    .compost-card li {
+      margin-bottom: 0.4em;
+      line-height: 1.6;
+    }
+    .compost-card li strong, .compost-card b {
+      color: #2E7D32;
+      font-weight: 700;
+    }
+    .compost-card .highlight {
+      color: #c62828;
+      font-weight: 700;
+    }
+    @media (max-width: 700px) {
+      .compost-guide-container {
+        padding: 0.5rem;
+        gap: 1rem;
+      }
+      .compost-card {
+        padding: 1rem 0.5rem 1rem 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-header">
+    <a href="features.html" class="back-home-btn">⬅ Back to Features</a>
+  </div>
+  <main>
+    <section class="section-content">
+      <h2 style="text-align:center; color:#2E7D32; font-size:2rem; margin-bottom:1.5rem;">🌿 Compost Guide</h2>
+      <div class="compost-guide-container">
+        <div class="compost-card">
+          <h3>♻ What to Compost</h3>
+          <ul>
+            <li>Vegetable & fruit peels</li>
+            <li>Tea leaves, coffee grounds</li>
+            <li>Dry leaves, grass clippings</li>
+            <li>Egg shells, nutshells</li>
+            <li>Paper napkins (unbleached)</li>
+          </ul>
+        </div>
+        <div class="compost-card">
+          <h3>🪱 How to Compost</h3>
+          <ol>
+            <li>Choose a bin or pit in a shady spot.</li>
+            <li>Add a layer of dry waste (leaves, paper).</li>
+            <li>Add kitchen waste (peels, leftovers) in small pieces.</li>
+            <li>Keep moist but not soggy. <b class="highlight">Mix every few days</b>.</li>
+            <li>Cover to keep pests away. Compost is ready in 2-3 months.</li>
+          </ol>
+        </div>
+        <div class="compost-card">
+          <h3>🌿 Compost Boosters</h3>
+          <ul>
+            <li>Mix in a handful of soil or old compost to <b>speed up</b> the process.</li>
+            <li>Add cow dung or buttermilk for <b>faster decomposition</b>.</li>
+          </ul>
+        </div>
+        <div class="compost-card">
+          <h3>🌱 How to Use Compost</h3>
+          <ul>
+            <li>Mix with garden soil for <b>healthy plants</b>.</li>
+            <li>Use as mulch around trees and vegetables.</li>
+          </ul>
+        </div>
+        <div class="compost-card">
+          <h3>🚫 What Not to Compost</h3>
+          <ul>
+            <li><b class="highlight">Don't</b> add meat, fish, or dairy products.</li>
+            <li><b class="highlight">Avoid</b> oily foods and cooked food with spices.</li>
+            <li>No plastic, glass, or metal items.</li>
+            <li>No chemical or medical waste.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="eco-footer">Built for Bharat. Powered by EcoMitra. 🌏</footer>
+</body>
+</html> 

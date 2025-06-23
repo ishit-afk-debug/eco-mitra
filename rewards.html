@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🎓 Become an Eco Trainer & Earn Rewards - EcoMitra</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .rewards-header {
+      background: #e8f5e9;
+      border-radius: 1.2em;
+      margin: 1.5em auto 1em auto;
+      padding: 1.2em 1em 0.5em 1em;
+      max-width: 600px;
+      box-shadow: 0 2px 8px rgba(60,120,60,0.07);
+      text-align: center;
+    }
+    .rewards-section {
+      background: #fff;
+      border-radius: 1.1em;
+      box-shadow: 0 2px 10px rgba(60,120,60,0.08);
+      padding: 1.2em 1.2em 1.2em 1.2em;
+      margin: 1.2em auto;
+      max-width: 600px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7em;
+    }
+    .rewards-section h2 {
+      font-size: 1.25em;
+      color: #256029;
+      margin-bottom: 0.3em;
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+    }
+    .rewards-section ul {
+      margin: 0.5em 0 0 0;
+      padding-left: 1.2em;
+    }
+    .rewards-section li {
+      font-size: 1.05em;
+      margin-bottom: 0.4em;
+      color: #444;
+      line-height: 1.6;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5em;
+    }
+    .rewards-section .icon {
+      font-size: 1.3em;
+      margin-right: 0.3em;
+      flex-shrink: 0;
+    }
+    .rewards-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2em;
+      align-items: center;
+      margin: 2em auto 1.5em auto;
+      max-width: 600px;
+    }
+    .rewards-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.7em;
+      background: linear-gradient(90deg, #A5D6A7 60%, #81c784 100%);
+      color: #1B5E20;
+      font-weight: 700;
+      font-size: 1.18em;
+      border: none;
+      border-radius: 2em;
+      padding: 1em 2.5em;
+      text-align: center;
+      text-decoration: none;
+      box-shadow: 0 2px 8px #0001;
+      transition: background 0.18s, color 0.18s, box-shadow 0.18s, transform 0.13s;
+      cursor: pointer;
+      min-width: 240px;
+    }
+    .rewards-btn:hover, .rewards-btn:focus {
+      background: linear-gradient(90deg, #81c784 60%, #A5D6A7 100%);
+      color: #145a1a;
+      box-shadow: 0 4px 16px #0002;
+      outline: none;
+      transform: scale(1.04);
+    }
+    .lang-select-container {
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+      margin: 1em 0 0.5em 0;
+      justify-content: flex-end;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .lang-select-container label {
+      font-size: 1em;
+      color: #256029;
+    }
+    .lang-select-container select {
+      font-size: 1em;
+      border-radius: 0.5em;
+      padding: 0.2em 0.7em;
+      border: 1.5px solid #b2dfdb;
+      background: #f1f8e9;
+      color: #256029;
+    }
+    @media (max-width: 700px) {
+      .rewards-header, .rewards-section, .rewards-actions { max-width: 98vw; }
+      .rewards-btn { width: 98vw; min-width: unset; font-size: 1.05em; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-header">
+    <a href="index.html" class="back-home-btn" data-i18n="back_home">← Back to Home</a>
+  </div>
+  <div class="lang-select-container">
+    <label for="lang-select-rewards" data-i18n="select_language_label">🔊 Select Language</label>
+    <select id="lang-select-rewards">
+      <option value="en">English</option>
+      <option value="hi">हिन्दी</option>
+    </select>
+  </div>
+  <div class="rewards-header">
+    <h1 data-i18n="rewards_title">🎓 Become an Eco Trainer & Earn Money + Recognition</h1>
+    <p data-i18n="rewards_subtitle">Turn your knowledge into income and leadership. Start your own micro-business with EcoMitra!</p>
+  </div>
+  <main>
+    <div class="rewards-section" style="margin-bottom:1.5em;">
+      <h2><span class="icon">👩‍🏫</span> <span data-i18n="trainer_section_title">Become a Local Eco Trainer</span></h2>
+      <ul>
+        <li><span class="icon">📚</span> <span data-i18n="trainer_point1">Teach 10+ people in your village about composting, upcycling, or waste segregation.</span></li>
+        <li><span class="icon">🌟</span> <span data-i18n="trainer_point2">Get featured as a local leader and build your reputation.</span></li>
+        <li><span class="icon">💼</span> <span data-i18n="trainer_point3">Start your own micro-waste business and earn from training, collection, or compost sales.</span></li>
+        <li><span class="icon">📸</span> <span data-i18n="trainer_point4">Upload photos of your training sessions as proof and inspire others.</span></li>
+      </ul>
+    </div>
+    <div class="rewards-section" style="margin-bottom:1.5em;">
+      <h2><span class="icon">💡</span> <span data-i18n="idea_section_title">Submit Innovation Ideas</span></h2>
+      <ul>
+        <li><span class="icon">🛠️</span> <span data-i18n="idea_point1">Share creative ideas: low-cost compost bins, DIY recycling machines, or new craft products.</span></li>
+        <li><span class="icon">🔗</span> <span data-i18n="idea_point2">Submit your idea via the EcoMitra app or <a href='https://forms.gle/eco-idea-form' target='_blank' style='color:#388e3c;text-decoration:underline;'>this Google Form</a>.</span></li>
+        <li><span class="icon">🏅</span> <span data-i18n="idea_point3">Best ideas get featured and can become real businesses!</span></li>
+      </ul>
+      <div style="text-align:center;margin-top:1em;">
+        <a href="https://forms.gle/eco-idea-form" target="_blank" class="rewards-btn" id="submit-idea-btn"><span>📥</span> <span data-i18n="submit_idea_btn">Submit My Idea</span></a>
+      </div>
+    </div>
+    <div class="rewards-section" style="margin-bottom:1.5em;">
+      <h2><span class="icon">🏆</span> <span data-i18n="rewards_section_title">Earn Monthly Income & Rewards</span></h2>
+      <ul>
+        <li><span class="icon">💸</span> <span data-i18n="rewards_point1">Win ₹500/month for best trainers or ideas—real cash, not just points!</span></li>
+        <li><span class="icon">🎁</span> <span data-i18n="rewards_point2">Get EcoMitra badges, digital gift cards, and a chance to join official training programs.</span></li>
+        <li><span class="icon">🚀</span> <span data-i18n="rewards_point3">Grow your income by helping your community and building your own eco-business.</span></li>
+      </ul>
+      <blockquote style="background:#f1f8e9;border-left:5px solid #81c784;padding:1em 1.2em;border-radius:0.7em;margin:1.2em 0 0.5em 0;font-size:1.08em;color:#256029;">
+        <span data-i18n="success_quote">“I trained 20 people and earned ₹1000 in 2 months.”</span><br>
+        <span style="font-size:0.98em;color:#607d8b;">— Sunita Devi, Eco Trainer</span>
+      </blockquote>
+    </div>
+    <div class="rewards-actions">
+      <a href="https://forms.gle/eco-idea-form" target="_blank" class="rewards-btn" id="submit-idea-btn"><span>📥</span> <span data-i18n="submit_idea_btn">Submit Idea</span></a>
+      <a href="mailto:team@ecomitra.in" class="rewards-btn" id="contact-team-btn"><span>📩</span> <span data-i18n="contact_team_btn">Contact EcoMitra Team</span></a>
+    </div>
+  </main>
+  <footer class="eco-footer" data-i18n="footer">Built for Bharat. Powered by EcoMitra. 🌏</footer>
+  <script>
+    const translations = {
+      hi: {
+        back_home: '← होम पेज पर वापस जाएं',
+        select_language_label: '🔊 भाषा चुनें',
+        rewards_title: '🎓 इको ट्रेनर बनें और पैसे + पहचान पाएं',
+        rewards_subtitle: 'अपने ज्ञान को आय और नेतृत्व में बदलें। EcoMitra के साथ अपना खुद का माइक्रो-बिजनेस शुरू करें!',
+        trainer_section_title: 'स्थानीय इको ट्रेनर बनें',
+        trainer_point1: 'अपने गाँव में 10+ लोगों को कम्पोस्टिंग, अपसाइक्लिंग या कचरा छंटाई के बारे में सिखाएं।',
+        trainer_point2: 'स्थानीय लीडर के रूप में पहचान बनाएं और फीचर हों।',
+        trainer_point3: 'अपना खुद का माइक्रो-वेस्ट बिजनेस शुरू करें और ट्रेनिंग, कलेक्शन या कम्पोस्ट बिक्री से कमाएं।',
+        trainer_point4: 'प्रशिक्षण सत्रों की फोटो अपलोड करें और दूसरों को प्रेरित करें।',
+        idea_section_title: 'नवाचार आइडिया भेजें',
+        idea_point1: 'रचनात्मक आइडिया साझा करें: सस्ते कम्पोस्ट बिन, DIY मशीनें, या नए क्राफ्ट उत्पाद।',
+        idea_point2: 'EcoMitra ऐप या <a href=\'https://forms.gle/eco-idea-form\' target=\'_blank\' style=\'color:#388e3c;text-decoration:underline;\'>इस Google Form</a> के माध्यम से भेजें।',
+        idea_point3: 'सर्वश्रेष्ठ आइडिया फीचर होंगे और असली बिजनेस बन सकते हैं!',
+        submit_idea_btn: 'मेरा आइडिया भेजें',
+        rewards_section_title: 'मासिक आय और इनाम पाएं',
+        rewards_point1: 'सर्वश्रेष्ठ ट्रेनर या आइडिया के लिए ₹500/माह जीतें—सच्ची नकद राशि!',
+        rewards_point2: 'EcoMitra बैज, डिजिटल गिफ्ट कार्ड और आधिकारिक ट्रेनिंग प्रोग्राम में शामिल होने का मौका पाएं।',
+        rewards_point3: 'अपने समुदाय की मदद कर अपनी खुद की इको-बिजनेस बढ़ाएं।',
+        success_quote: '“मैंने 20 लोगों को ट्रेन किया और 2 महीनों में ₹1000 कमाए।”',
+        contact_team_btn: 'EcoMitra टीम से संपर्क करें',
+        footer: 'भारत के लिए बनाया गया। EcoMitra द्वारा संचालित। 🌏',
+      },
+      en: {
+        back_home: '← Back to Home',
+        select_language_label: '🔊 Select Language',
+        rewards_title: '🎓 Become an Eco Trainer & Earn Money + Recognition',
+        rewards_subtitle: 'Turn your knowledge into income and leadership. Start your own micro-business with EcoMitra!',
+        trainer_section_title: 'Become a Local Eco Trainer',
+        trainer_point1: 'Teach 10+ people in your village about composting, upcycling, or waste segregation.',
+        trainer_point2: 'Get featured as a local leader and build your reputation.',
+        trainer_point3: 'Start your own micro-waste business and earn from training, collection, or compost sales.',
+        trainer_point4: 'Upload photos of your training sessions as proof and inspire others.',
+        idea_section_title: 'Submit Innovation Ideas',
+        idea_point1: 'Share creative ideas: low-cost compost bins, DIY recycling machines, or new craft products.',
+        idea_point2: 'Submit your idea via the EcoMitra app or <a href=\'https://forms.gle/eco-idea-form\' target=\'_blank\' style=\'color:#388e3c;text-decoration:underline;\'>this Google Form</a>.',
+        idea_point3: 'Best ideas get featured and can become real businesses!',
+        submit_idea_btn: 'Submit My Idea',
+        rewards_section_title: 'Earn Monthly Income & Rewards',
+        rewards_point1: 'Win ₹500/month for best trainers or ideas—real cash, not just points!',
+        rewards_point2: 'Get EcoMitra badges, digital gift cards, and a chance to join official training programs.',
+        rewards_point3: 'Grow your income by helping your community and building your own eco-business.',
+        success_quote: '“I trained 20 people and earned ₹1000 in 2 months.”',
+        contact_team_btn: 'Contact EcoMitra Team',
+        footer: 'Built for Bharat. Powered by EcoMitra. 🌏',
+      }
+    };
+    const langSelect = document.getElementById('lang-select-rewards');
+    function setLang(lang) {
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+          if (key === 'idea_point2') {
+            el.innerHTML = translations[lang][key];
+          } else {
+            el.textContent = translations[lang][key];
+          }
+        } else if (translations['en'][key]) {
+          if (key === 'idea_point2') {
+            el.innerHTML = translations['en'][key];
+          } else {
+            el.textContent = translations['en'][key];
+          }
+        }
+      });
+    }
+    langSelect.addEventListener('change', e => {
+      const lang = e.target.value;
+      localStorage.setItem('ecomitra_lang', lang);
+      setLang(lang);
+    });
+    // On page load, set language from localStorage or default
+    const savedLang = localStorage.getItem('ecomitra_lang') || langSelect.value;
+    langSelect.value = savedLang;
+    setLang(savedLang);
+  </script>
+</body>
+</html>

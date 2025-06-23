@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📊 Today's Waste Rates (Live) - EcoMitra</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .rates-header {
+      background: #e8f5e9;
+      border-radius: 1.2em;
+      margin: 1.5em auto 1em auto;
+      padding: 1.2em 1em 0.5em 1em;
+      max-width: 600px;
+      box-shadow: 0 2px 8px rgba(60,120,60,0.07);
+      text-align: center;
+    }
+    .rates-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2em;
+      justify-content: center;
+      margin: 2em auto 2em auto;
+      max-width: 900px;
+    }
+    .rate-card {
+      flex: 1 1 220px;
+      min-width: 220px;
+      max-width: 270px;
+      background: #fff;
+      border-radius: 1.1em;
+      box-shadow: 0 2px 10px rgba(60,120,60,0.08);
+      padding: 1.2em 1em 1em 1em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 2.5px solid #e0e0e0;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .rate-card:hover {
+      transform: translateY(-4px) scale(1.03);
+      box-shadow: 0 6px 18px rgba(60,120,60,0.13);
+    }
+    .rate-icon {
+      font-size: 2.5em;
+      margin-bottom: 0.5em;
+    }
+    .rate-title {
+      font-size: 1.2em;
+      font-weight: 600;
+      margin-bottom: 0.2em;
+      color: #256029;
+    }
+    .rate-amount {
+      font-size: 1.1em;
+      font-weight: 500;
+      margin-bottom: 0.3em;
+      color: #388e3c;
+    }
+    .rate-tip {
+      font-size: 0.98em;
+      color: #607d8b;
+      margin-bottom: 0.5em;
+      text-align: center;
+    }
+    .rate-updated {
+      font-size: 0.92em;
+      color: #888;
+      margin-top: auto;
+    }
+    /* Category colors */
+    .rate-paper { border-color: #b2dfdb; background: #f1f8e9; }
+    .rate-plastic { border-color: #ffe082; background: #fffde7; }
+    .rate-cardboard { border-color: #ffe0b2; background: #fbe9e7; }
+    .rate-metal { border-color: #b0bec5; background: #eceff1; }
+    .rate-aluminum { border-color: #c5cae9; background: #e8eaf6; }
+    .rate-ewaste { border-color: #d1c4e9; background: #f3e5f5; }
+    @media (max-width: 700px) {
+      .rates-cards { flex-direction: column; align-items: center; }
+      .rate-card { width: 95%; max-width: 350px; }
+    }
+    .lang-select-container {
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+      margin: 1em 0 0.5em 0;
+      justify-content: flex-end;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .lang-select-container label {
+      font-size: 1em;
+      color: #256029;
+    }
+    .lang-select-container select {
+      font-size: 1em;
+      border-radius: 0.5em;
+      padding: 0.2em 0.7em;
+      border: 1.5px solid #b2dfdb;
+      background: #f1f8e9;
+      color: #256029;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-header">
+    <a href="index.html" class="back-home-btn" data-i18n="back_home">← Back to Home</a>
+  </div>
+  <div class="lang-select-container">
+    <label for="lang-select-rates" data-i18n="select_language_label">🔊 Select Language</label>
+    <select id="lang-select-rates">
+      <option value="en">English</option>
+      <option value="hi">हिन्दी</option>
+    </select>
+  </div>
+  <div class="rates-header">
+    <h1 data-i18n="rates_title">📊 Today's Waste Rates (Live)</h1>
+    <div class="subtitle" data-i18n="rates_subtitle">These are the average buying rates from verified local scrap dealers. Rates may vary by location, quantity, and cleanliness.</div>
+  </div>
+  <main>
+    <div class="rates-cards">
+      <div class="rate-card rate-paper">
+        <div class="rate-icon">📄</div>
+        <div class="rate-title" data-i18n="paper">Paper</div>
+        <div class="rate-amount" data-i18n="paper_rate">₹8/kg</div>
+        <div class="rate-tip" data-i18n="paper_tip">Clean to get best price</div>
+        <div class="rate-updated" data-i18n="updated">📅 Updated: 22 June 2025</div>
+      </div>
+      <div class="rate-card rate-plastic">
+        <div class="rate-icon">🧴</div>
+        <div class="rate-title" data-i18n="plastic">Plastic Bottles</div>
+        <div class="rate-amount" data-i18n="plastic_rate">₹12/kg</div>
+        <div class="rate-tip" data-i18n="plastic_tip">Remove caps & labels</div>
+        <div class="rate-updated" data-i18n="updated">📅 Updated: 22 June 2025</div>
+      </div>
+      <div class="rate-card rate-cardboard">
+        <div class="rate-icon">📦</div>
+        <div class="rate-title" data-i18n="cardboard">Cardboard</div>
+        <div class="rate-amount" data-i18n="cardboard_rate">₹6/kg</div>
+        <div class="rate-tip" data-i18n="cardboard_tip">Keep dry for better rates</div>
+        <div class="rate-updated" data-i18n="updated">📅 Updated: 22 June 2025</div>
+      </div>
+      <div class="rate-card rate-metal">
+        <div class="rate-icon">🔩</div>
+        <div class="rate-title" data-i18n="metal">Metal Scrap</div>
+        <div class="rate-amount" data-i18n="metal_rate">₹25/kg</div>
+        <div class="rate-tip" data-i18n="metal_tip">Sort by type for best value</div>
+        <div class="rate-updated" data-i18n="updated">📅 Updated: 22 June 2025</div>
+      </div>
+      <div class="rate-card rate-aluminum">
+        <div class="rate-icon">🥫</div>
+        <div class="rate-title" data-i18n="aluminum">Aluminum Cans</div>
+        <div class="rate-amount" data-i18n="aluminum_rate">₹30/kg</div>
+        <div class="rate-tip" data-i18n="aluminum_tip">Crush cans to save space</div>
+        <div class="rate-updated" data-i18n="updated">📅 Updated: 22 June 2025</div>
+      </div>
+      <div class="rate-card rate-ewaste">
+        <div class="rate-icon">💻</div>
+        <div class="rate-title" data-i18n="ewaste">E-Waste</div>
+        <div class="rate-amount" data-i18n="ewaste_rate">₹15–₹40/unit</div>
+        <div class="rate-tip" data-i18n="ewaste_tip">Handle safely, remove batteries</div>
+        <div class="rate-updated" data-i18n="updated">📅 Updated: 22 June 2025</div>
+      </div>
+    </div>
+  </main>
+  <footer class="eco-footer" data-i18n="footer">Built for Bharat. Powered by EcoMitra. 🌏</footer>
+  <script>
+    const translations = {
+      hi: {
+        select_language_label: '🔊 भाषा चुनें',
+        rates_title: '📊 आज के कचरे के रेट (लाइव)',
+        rates_subtitle: 'ये औसत खरीद रेट हैं, स्थानीय कबाड़ी वालों से। रेट स्थान, मात्रा और सफाई पर निर्भर करते हैं।',
+        paper: 'कागज',
+        paper_rate: '₹8/किग्रा',
+        paper_tip: 'साफ रखें, बेहतर दाम पाएं',
+        plastic: 'प्लास्टिक बोतलें',
+        plastic_rate: '₹12/किग्रा',
+        plastic_tip: 'ढक्कन और लेबल हटा दें',
+        cardboard: 'गत्ता',
+        cardboard_rate: '₹6/किग्रा',
+        cardboard_tip: 'सूखा रखें, बेहतर रेट पाएं',
+        metal: 'धातु कबाड़',
+        metal_rate: '₹25/किग्रा',
+        metal_tip: 'प्रकार अनुसार छांटें',
+        aluminum: 'एल्यूमिनियम कैन',
+        aluminum_rate: '₹30/किग्रा',
+        aluminum_tip: 'कैन दबा दें, जगह बचाएं',
+        ewaste: 'ई-वेस्ट',
+        ewaste_rate: '₹15–₹40/यूनिट',
+        ewaste_tip: 'सावधानी से संभालें, बैटरी निकालें',
+        updated: '📅 अपडेट: 22 जून 2025',
+        footer: 'भारत के लिए बनाया गया। EcoMitra द्वारा संचालित। 🌏',
+      },
+      en: {
+        select_language_label: '🔊 Select Language',
+        rates_title: "📊 Today's Waste Rates (Live)",
+        rates_subtitle: 'These are the average buying rates from verified local scrap dealers. Rates may vary by location, quantity, and cleanliness.',
+        paper: 'Paper',
+        paper_rate: '₹8/kg',
+        paper_tip: 'Clean to get best price',
+        plastic: 'Plastic Bottles',
+        plastic_rate: '₹12/kg',
+        plastic_tip: 'Remove caps & labels',
+        cardboard: 'Cardboard',
+        cardboard_rate: '₹6/kg',
+        cardboard_tip: 'Keep dry for better rates',
+        metal: 'Metal Scrap',
+        metal_rate: '₹25/kg',
+        metal_tip: 'Sort by type for best value',
+        aluminum: 'Aluminum Cans',
+        aluminum_rate: '₹30/kg',
+        aluminum_tip: 'Crush cans to save space',
+        ewaste: 'E-Waste',
+        ewaste_rate: '₹15–₹40/unit',
+        ewaste_tip: 'Handle safely, remove batteries',
+        updated: '📅 Updated: 22 June 2025',
+        footer: 'Built for Bharat. Powered by EcoMitra. 🌏',
+      }
+    };
+  </script>
+  <script src="lang.js"></script>
+  <script>initLanguage(translations, 'lang-select-rates');</script>
+</body>
+</html> 

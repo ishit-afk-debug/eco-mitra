@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoMitra – Smart Waste Management for Livelihood</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="leaves-container"></div>
+  <header class="header-card">
+    <div class="header-actions">
+      <div class="lang-select-container">
+        <a href="#" id="login-signup-link" class="login-signup-link"><span class="login-icon">🔐</span> <span data-i18n="login_signup">Login / Sign Up</span></a>
+        <label for="lang-select-main" data-i18n="select_language_label"><span class="lang-icon">🔈</span> <span> Select Language</span></label>
+        <select id="lang-select-main" class="modern-lang-select">
+          <option value="en">English</option>
+          <option value="hi">हिन्दी</option>
+          <option value="bn">বাংলা</option>
+          <option value="mr">मराठी</option>
+        </select>
+      </div>
+      <button id="dark-mode-toggle" title="Toggle dark mode" aria-label="Toggle dark mode">🌙</button>
+      <button id="share-app-btn" title="Share this app" aria-label="Share this app">📤</button>
+      <button id="login-btn" title="Login" aria-label="Login" style="display:none;">🔐</button>
+      <span id="welcome-user" style="display:none;"></span>
+      <button id="logout-btn" style="display:none;">Logout</button>
+    </div>
+    <h1 class="main-title" data-i18n="main_title">EcoMitra – Smart Waste Management for Livelihood</h1>
+    <p class="main-subheading" data-i18n="main_subheading">Empowering India to Turn Waste into Wealth</p>
+  </header>
+
+  <main>
+    <div class="page-navigation">
+      <a href="earn.html" class="nav-btn" data-i18n="earn_nav">💰 Earn from Waste</a>
+      <a href="features.html" class="nav-btn" data-i18n="features_nav">🌟 Explore Features</a>
+      <a href="stories.html" class="nav-btn" data-i18n="stories_nav">🌟 Success Stories</a>
+      <a href="todays-rates.html" class="nav-btn" id="todays-rates-btn">Today's Rates</a>
+    </div>
+
+    <section class="eco-actions">
+      <div class="feature-row-cards">
+        <div class="feature-card" id="photo-card">
+          <div class="feature-icon">📷</div>
+          <div class="feature-content">
+            <div class="feature-helper" data-i18n="click_identify">Click to identify waste</div>
+            <div class="photo-preview-frame" id="photo-preview-frame">
+              <span class="photo-placeholder-text" data-i18n="no_photo">No photo selected</span>
+              <img id="photo-preview" style="display:none; max-width:100%; max-height:100%; border-radius:0.7rem;" alt="Photo preview" />
+            </div>
+            <div id="photo-result-box" style="margin-top:1em;font-weight:500;color:#2E7D32;text-align:center;"></div>
+            <input type="file" id="waste-photo" accept="image/*" style="display:none">
+          </div>
+          <div class="feature-action">
+            <button id="take-photo-btn" class="feature-btn" data-i18n="take_photo">Take Photo</button>
+          </div>
+        </div>
+        <div class="feature-card" id="voice-card">
+          <div class="feature-icon">🎤</div>
+          <div class="feature-content">
+            <div class="feature-title" data-i18n="press_speak">Speak in Your Language</div>
+            <div class="feature-helper" data-i18n="ask_voice">Ask questions using your voice</div>
+          </div>
+          <div class="feature-action">
+            <p class="benefit-line" data-i18n="benefit_line">Speak in your local language — EcoMitra will understand and guide you instantly.</p>
+            <button id="voice-btn" class="feature-btn" data-i18n="start_speaking">Start Speaking</button>
+            <span id="voice-status"></span>
+          </div>
+        </div>
+        <div class="feature-card" id="ask-card">
+          <div class="feature-icon">🔍</div>
+          <div class="feature-content">
+            <div class="feature-title" data-i18n="ask_by_typing">Ask by Typing</div>
+            <div class="feature-helper" data-i18n="ask_type">Type waste items to get guidance</div>
+            <textarea id="waste-desc" rows="3" placeholder="e.g., plastic bottle, old clothes..." data-i18n-placeholder="ask_placeholder"></textarea>
+          </div>
+          <div class="feature-action">
+            <button id="ask-btn" class="feature-btn" data-i18n="get_waste_advice">💡 What Can I Do With This?</button>
+          </div>
+        </div>
+      </div>
+      <div id="suggestion-box" class="suggestion-box" style="display:none;"></div>
+    </section>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="login-modal" style="display:none;">
+      <div class="login-modal-content">
+        <button id="close-login-modal" class="close-login-modal" aria-label="Close">&times;</button>
+        <div class="login-modal-header">
+          <span class="login-modal-icon">🔐</span>
+          <h2 data-i18n="login_title">Login / Signup</h2>
+        </div>
+        <form id="login-form">
+          <input type="text" id="login-username" name="username" placeholder="Username" required data-i18n-placeholder="login_username_placeholder">
+          <input type="password" id="login-password" name="password" placeholder="Password" required data-i18n-placeholder="login_password_placeholder">
+          <button type="submit" class="feature-btn" data-i18n="login_submit">Login / Signup</button>
+        </form>
+        <div id="login-error" class="login-error"></div>
+      </div>
+    </div>
+  </main>
+  <footer class="eco-footer">
+    <div class="footer-content">
+      <div class="footer-contact">
+        <h3 data-i18n="contact_us">Contact Us</h3>
+        <ul>
+          <li>📞 <strong>Phone:</strong> <a href="tel:+919876543210">+91 98765 43210</a></li>
+          <li>📧 <strong>Email:</strong> <a href="mailto:support@ecomitra.in">support@ecomitra.in</a></li>
+          <li>📍 <strong>Address:</strong> Village EcoHub, Block 3, Green District, India</li>
+        </ul>
+        <div class="footer-social-links">
+          <a href="https://instagram.com/ecomitra" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram">
+            <span class="footer-social-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="#E1306C"/><path d="M12 7.2A4.8 4.8 0 1 0 12 16.8A4.8 4.8 0 1 0 12 7.2Z" fill="#fff"/><circle cx="17.2" cy="6.8" r="1.2" fill="#fff"/></svg>
+            </span>
+            <span>@ecomitra</span>
+          </a>
+          <a href="https://facebook.com/ecomitra" target="_blank" rel="noopener" class="footer-social-link" aria-label="Facebook">
+            <span class="footer-social-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="#1877F3"/><path d="M15.5 8.5H14V7.5C14 7.22 14.22 7 14.5 7H15.5V5H14.5C13.12 5 12 6.12 12 7.5V8.5H11V10.5H12V19H14V10.5H15.09L15.5 8.5Z" fill="#fff"/></svg>
+            </span>
+            <span>facebook.com/ecomitra</span>
+          </a>
+          <a href="https://twitter.com/ecomitra" target="_blank" rel="noopener" class="footer-social-link" aria-label="Twitter">
+            <span class="footer-social-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="#1DA1F2"/><path d="M19.633 7.997c.013.176.013.353.013.53 0 5.39-4.104 11.61-11.61 11.61-2.31 0-4.457-.676-6.266-1.84.32.038.637.05.97.05 1.92 0 3.687-.65 5.096-1.74-1.8-.037-3.32-1.22-3.843-2.85.25.037.5.062.763.062.37 0 .74-.05 1.085-.144-1.87-.375-3.28-2.03-3.28-4.02v-.05c.55.3 1.18.48 1.85.5a4.07 4.07 0 0 1-1.81-3.39c0-.75.2-1.45.55-2.05a11.62 11.62 0 0 0 8.42 4.27c-.07-.3-.11-.62-.11-.95 0-2.28 1.85-4.13 4.13-4.13 1.19 0 2.27.5 3.03 1.3a8.18 8.18 0 0 0 2.61-.99c-.09.28-.28.52-.53.67a4.13 4.13 0 0 0 1.88-.52c-.12.28-.3.53-.5.74z" fill="#fff"/></svg>
+            </span>
+            <span>@ecomitra</span>
+          </a>
+        </div>
+      </div>
+      <div class="footer-feedback">
+        <h3>📬 Send us your feedback</h3>
+        <form id="footer-feedback-form">
+          <label for="footer-feedback-name" data-i18n="name_label">Name</label>
+          <input type="text" id="footer-feedback-name" name="name" required>
+          <label for="footer-feedback-email" data-i18n="email_label">Email</label>
+          <input type="email" id="footer-feedback-email" name="email" required>
+          <label for="footer-feedback-message" data-i18n="message_label">Message</label>
+          <textarea id="footer-feedback-message" name="message" rows="2" required></textarea>
+          <button type="submit" class="footer-feedback-btn" data-i18n="send_feedback">Send Feedback</button>
+        </form>
+        <div id="footer-feedback-thankyou" class="footer-feedback-thankyou" style="display:none;" data-i18n="thank_you">Thank you for your feedback!</div>
+      </div>
+    </div>
+    <div class="footer-bottom" data-i18n="footer">Built for Bharat. Powered by EcoMitra. 🌏</div>
+  </footer>
+  <div class="tree-container"></div>
+  <div id="qr-modal" class="qr-modal" style="display:none;">
+    <div class="qr-modal-content">
+      <span id="close-qr-modal" class="close-qr-modal">&times;</span>
+      <h2 data-i18n="share_qr_title">Scan to Share</h2>
+      <canvas id="qr-canvas"></canvas>
+    </div>
+  </div>
+  <script src="ecomitra.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrious@4.0.2/dist/qrious.min.js"></script>
+  <script>
+    const translations = {
+      en: {
+        select_language_label: '🔈 Select Language',
+        main_title: 'EcoMitra – Smart Waste Management for Livelihood',
+        main_subheading: 'Empowering India to Turn Waste into Wealth',
+        earn_nav: '💰 Earn from Waste',
+        features_nav: '🌟 Explore Features',
+        stories_nav: '🌟 Success Stories',
+        todays_rates_nav: "Today's Rates",
+        press_speak: 'Speak in Your Language',
+        benefit_line: 'Speak in your local language — EcoMitra will understand and guide you instantly.',
+        start_speaking: 'Start Speaking',
+        ask_by_typing: 'Ask by Typing',
+        ask_placeholder: 'e.g., plastic bottle, old clothes...',
+        get_waste_advice: '💡 What Can I Do With This?',
+        login_title: 'Login / Signup',
+        login_username_placeholder: 'Username',
+        login_password_placeholder: 'Password',
+        login_submit: 'Login / Signup',
+        share_qr_title: 'Scan to Share',
+        footer: 'Built for Bharat. Powered by EcoMitra. 🌏',
+        login_signup: 'Login / Sign Up',
+        click_identify: 'Click to identify waste',
+        no_photo: 'No photo selected',
+        take_photo: 'Take Photo',
+        ask_voice: 'Ask questions using your voice',
+        ask_type: 'Type waste items to get guidance',
+        contact_us: 'Contact Us',
+        name_label: 'Name',
+        email_label: 'Email',
+        message_label: 'Message',
+        send_feedback: 'Send Feedback',
+        thank_you: 'Thank you for your feedback!',
+      },
+      hi: {
+        select_language_label: '🔈 भाषा चुनें',
+        main_title: 'इकोमित्र – आजीविका के लिए स्मार्ट कचरा प्रबंधन',
+        main_subheading: 'भारत को कचरे से संपत्ति में बदलने के लिए सशक्त बनाना',
+        earn_nav: '💰 कचरे से कमाई',
+        features_nav: '🌟 फीचर्स देखें',
+        stories_nav: '🌟 सफलता की कहानियाँ',
+        todays_rates_nav: 'आज के रेट',
+        press_speak: 'अपनी भाषा में बोलें',
+        benefit_line: 'स्थानीय भाषा में बोलें — इकोमित्र तुरंत समझेगा और मार्गदर्शन करेगा।',
+        start_speaking: 'बोलना शुरू करें',
+        ask_by_typing: 'टाइप करके पूछें',
+        ask_placeholder: 'जैसे, प्लास्टिक बोतल, पुराने कपड़े...',
+        get_waste_advice: '💡 इसके साथ क्या कर सकते हैं?',
+        login_title: 'लॉगिन / साइनअप',
+        login_username_placeholder: 'यूज़रनेम',
+        login_password_placeholder: 'पासवर्ड',
+        login_submit: 'लॉगिन / साइनअप',
+        share_qr_title: 'शेयर करने के लिए स्कैन करें',
+        footer: 'भारत के लिए बनाया गया। EcoMitra द्वारा संचालित। 🌏',
+        login_signup: 'लॉगिन / साइन अप',
+        click_identify: 'कचरा पहचानने के लिए क्लिक करें',
+        no_photo: 'कोई फोटो चयनित नहीं',
+        take_photo: 'फोटो लें',
+        ask_voice: 'अपनी आवाज़ में सवाल पूछें',
+        ask_type: 'कचरे का नाम टाइप करें और मार्गदर्शन पाएं',
+        contact_us: 'संपर्क करें',
+        name_label: 'नाम',
+        email_label: 'ईमेल',
+        message_label: 'संदेश',
+        send_feedback: 'फीडबैक भेजें',
+        thank_you: 'आपकी प्रतिक्रिया के लिए धन्यवाद!',
+      }
+    };
+  </script>
+  <script src="lang.js"></script>
+  <script>initLanguage(translations, 'lang-select-main');</script>
+  <script>
+  // Photo preview logic for Take a Photo card
+  const photoInput = document.getElementById('waste-photo');
+  const photoPreview = document.getElementById('photo-preview');
+  const photoPreviewFrame = document.getElementById('photo-preview-frame');
+  const photoPlaceholderText = photoPreviewFrame ? photoPreviewFrame.querySelector('.photo-placeholder-text') : null;
+  const takePhotoBtn = document.getElementById('take-photo-btn');
+  if (photoInput && photoPreview && photoPreviewFrame) {
+    photoInput.addEventListener('change', function(e) {
+      const file = e.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(ev) {
+          photoPreview.src = ev.target.result;
+          photoPreview.style.display = 'block';
+          if (photoPlaceholderText) photoPlaceholderText.style.display = 'none';
+        };
+        reader.readAsDataURL(file);
+      } else {
+        photoPreview.src = '';
+        photoPreview.style.display = 'none';
+        if (photoPlaceholderText) photoPlaceholderText.style.display = 'block';
+      }
+    });
+    // Clicking the frame triggers file input
+    photoPreviewFrame.addEventListener('click', function() {
+      photoInput.click();
+    });
+    // Take Photo button triggers file input
+    if (takePhotoBtn) {
+      takePhotoBtn.addEventListener('click', function() {
+        photoInput.click();
+      });
+    }
+  }
+  // Login/Signup modal logic
+  const loginSignupLink = document.getElementById('login-signup-link');
+  const loginModal = document.getElementById('login-modal');
+  const closeLoginModal = document.getElementById('close-login-modal');
+  if (loginSignupLink && loginModal && closeLoginModal) {
+    loginSignupLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      loginModal.style.display = 'block';
+    });
+    closeLoginModal.addEventListener('click', function() {
+      loginModal.style.display = 'none';
+    });
+    window.addEventListener('click', function(e) {
+      if (e.target === loginModal) {
+        loginModal.style.display = 'none';
+      }
+    });
+  }
+  // Footer feedback form logic
+  const footerFeedbackForm = document.getElementById('footer-feedback-form');
+  const footerThankYou = document.getElementById('footer-feedback-thankyou');
+  if (footerFeedbackForm && footerThankYou) {
+    footerFeedbackForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      footerFeedbackForm.style.display = 'none';
+      footerThankYou.style.display = 'block';
+      setTimeout(() => {
+        footerThankYou.style.display = 'none';
+        footerFeedbackForm.reset();
+        footerFeedbackForm.style.display = 'block';
+      }, 3500);
+    });
+  }
+  </script>
+</body>
+</html>

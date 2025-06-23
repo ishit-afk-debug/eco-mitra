@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Features - EcoMitra</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-header">
+    <a href="index.html" class="back-home-btn" data-i18n="back_home">⬅ Back to Home</a>
+    <div class="lang-select-container">
+      <label for="lang-select-features" data-i18n="select_language_label">🔊 Select Language</label>
+      <select id="lang-select-features">
+        <option value="en">English</option>
+        <option value="hi">हिन्दी</option>
+      </select>
+    </div>
+  </div>
+  <main>
+    <section class="section-content">
+      <h2 data-i18n="explore_features">🌟 Explore Features</h2>
+      <div class="features-grid-new">
+        <div class="feature-card">
+          <div class="feature-icon">🗑️</div>
+          <div class="feature-title" data-i18n="waste_checker_title">Waste Type Checker</div>
+          <div class="feature-helper" data-i18n="waste_checker_desc">Check if your waste is Biodegradable, Not Biodegradable, Recyclable, or Do Not Burn. Click to see examples and icons.</div>
+          <div class="feature-action">
+            <a href="waste-type-checker.html" class="feature-btn" target="_blank" data-i18n="waste_checker_btn">Check Now</a>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🌞</div>
+          <div class="feature-title" data-i18n="eco_tips_title">Daily Eco Tips</div>
+          <div class="feature-helper" data-i18n="eco_tips_desc">Get a new eco-friendly tip every day! Tips about cleanliness, safe storage, and waste sorting.</div>
+          <div class="feature-action">
+            <a href="daily-eco-tips.html" class="feature-btn" target="_blank" data-i18n="eco_tips_btn">Show Tip</a>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🌿</div>
+          <div class="feature-title" data-i18n="compost_guide_title">Compost Guide</div>
+          <div class="feature-helper" data-i18n="compost_guide_desc">Detailed composting info: what to compost, how to compost, boosters, and usage. Click for the full guide.</div>
+          <div class="feature-action">
+            <a href="compost-guide.html" class="feature-btn" target="_blank" data-i18n="compost_guide_btn">Guide</a>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📥</div>
+          <div class="feature-title" data-i18n="offline_support_title">Offline Support</div>
+          <div class="feature-helper" data-i18n="offline_support_desc">Download a PDF with waste type info, composting guide, and eco tips for offline use.</div>
+          <div class="feature-action">
+            <a href="offline-support.html" class="feature-btn" target="_blank" data-i18n="offline_support_btn">Download PDF</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="eco-footer" data-i18n="footer">Built for Bharat. Powered by EcoMitra. 🌏</footer>
+  <script>
+    const translations = {
+      hi: {
+        back_home: '⬅ होम पेज पर वापस जाएं',
+        explore_features: '🌟 फीचर्स देखें',
+        waste_checker_title: 'कचरा प्रकार जांचें',
+        waste_checker_desc: 'जांचें कि आपका कचरा बायोडिग्रेडेबल, नॉन-बायोडिग्रेडेबल, रिसायक्लेबल या जलाने योग्य नहीं है। उदाहरण और आइकन देखने के लिए क्लिक करें।',
+        waste_checker_btn: 'अभी जांचें',
+        eco_tips_title: 'डेली ईको टिप्स',
+        eco_tips_desc: 'हर दिन एक नई ईको-फ्रेंडली टिप पाएं! सफाई, सुरक्षित भंडारण और कचरा छंटाई के टिप्स।',
+        eco_tips_btn: 'टिप देखें',
+        compost_guide_title: 'कम्पोस्ट गाइड',
+        compost_guide_desc: 'विस्तृत कम्पोस्टिंग जानकारी: क्या कम्पोस्ट करें, कैसे करें, बूस्टर और उपयोग। पूरी गाइड के लिए क्लिक करें।',
+        compost_guide_btn: 'गाइड',
+        offline_support_title: 'ऑफलाइन सपोर्ट',
+        offline_support_desc: 'कचरा प्रकार, कम्पोस्ट गाइड और ईको टिप्स की PDF डाउनलोड करें।',
+        offline_support_btn: 'PDF डाउनलोड करें',
+        footer: 'भारत के लिए बनाया गया। EcoMitra द्वारा संचालित। 🌏',
+        select_language_label: '🔊 भाषा चुनें',
+      },
+      en: {
+        back_home: '⬅ Back to Home',
+        explore_features: '🌟 Explore Features',
+        waste_checker_title: 'Waste Type Checker',
+        waste_checker_desc: 'Check if your waste is Biodegradable, Not Biodegradable, Recyclable, or Do Not Burn. Click to see examples and icons.',
+        waste_checker_btn: 'Check Now',
+        eco_tips_title: 'Daily Eco Tips',
+        eco_tips_desc: 'Get a new eco-friendly tip every day! Tips about cleanliness, safe storage, and waste sorting.',
+        eco_tips_btn: 'Show Tip',
+        compost_guide_title: 'Compost Guide',
+        compost_guide_desc: 'Detailed composting info: what to compost, how to compost, boosters, and usage. Click for the full guide.',
+        compost_guide_btn: 'Guide',
+        offline_support_title: 'Offline Support',
+        offline_support_desc: 'Download a PDF with waste type info, composting guide, and eco tips for offline use.',
+        offline_support_btn: 'Download PDF',
+        footer: 'Built for Bharat. Powered by EcoMitra. 🌏',
+        select_language_label: '🔊 Select Language',
+      }
+    };
+  </script>
+  <script src="lang.js"></script>
+  <script>initLanguage(translations, 'lang-select-features');</script>
+</body>
+</html> 
