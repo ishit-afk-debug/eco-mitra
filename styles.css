@@ -1023,41 +1023,14 @@ body, .main-title, .main-subheading, .nav-btn, .eco-footer, .action-title, .acti
   color: #1B5E20;
 } 
 
+.logo-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
 .eco-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 1.1rem auto;
-  width: 92px;
-  height: 92px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #A5D6A7 60%, #e8f5e9 100%);
-  box-shadow: 0 4px 18px #2E7D3222, 0 1.5px 6px #0001;
-  position: relative;
-  z-index: 2;
-  transition: box-shadow 0.2s, transform 0.2s;
-}
-.eco-logo:hover, .eco-logo:focus {
-  box-shadow: 0 8px 32px #388e3c33, 0 2px 8px #0002;
-  transform: scale(1.04) rotate(-2deg);
-}
-.eco-logo-img {
-  width: 64px;
-  height: 64px;
+  height: 60px;
+  width: auto;
   object-fit: contain;
-  border-radius: 50%;
-  display: block;
-  margin: 0 auto;
-  background: none;
 }
-@media (max-width: 700px) {
-  .eco-logo {
-    width: 64px;
-    height: 64px;
-    margin-bottom: 0.7rem;
-  }
-  .eco-logo-img {
-    width: 44px;
-    height: 44px;
-  }
-} 
