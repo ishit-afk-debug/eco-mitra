@@ -1027,7 +1027,10 @@ body, .main-title, .main-subheading, .nav-btn, .eco-footer, .action-title, .acti
   position: absolute;
   top: 20px;
   left: 20px;
+  text-align: left;
+  z-index: 10; /* ensures it's above background if needed */
 }
+
 
 .eco-logo {
   height: 60px;
